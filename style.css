@@ -14,6 +14,11 @@ body {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
 ul {
     list-style-type: none;
 }
@@ -23,12 +28,12 @@ a {
 }
 
 /* header styles starts here */
-header {}
+/* header {} */
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .nav-logo {
@@ -88,8 +93,6 @@ nav {
     font-weight: 500;
 }
 
-
-
 .nav-menu img {
     width: 20px;
     height: 20px;
@@ -97,11 +100,117 @@ nav {
 
 /* header styles ends here */
 
+/* main styles ends here */
+
+/* banner styles starts here */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-content {
+    height: 700px;
+    width: 50%;
+    background-image: url('images/Group\ 14.png');
+    background-size: cover;
+    background-position: center;
+    margin-right: 0 50px;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title1 {
+    color: #0B0223;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.banner-title2 {
+    font-family: Work Sans;
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner-content p {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+.banner-content p img {
+    width: 20px;
+height: 20px;
+margin-right: 10px;
+
+}
+
+.banner-content p {
+    color: #534C64;
+font-size: 1.25rem;
+font-weight: 500;
+text-transform: lowercase;
+}
+
+.banner-img {
+    width: 50%;
+    /* padding: 0 20px; */
+    margin-right: 50px;
+}
+
+.btn-group {
+    margin-top: 40px;
+}
+
+.btn-primary {
+    background-color: #FF42A5;;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: #50C5F7;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    
+font-size: 1rem;
+font-weight: 600;
+text-transform: uppercase;
+}
+/* banner styles ends here */
+
+/* main styles ends here */
+
 
 /* responsive design starts here */
 @media screen and (max-width: 576px) {
     nav, .nav-menu {
         flex-direction: column;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+    }
+
+    .banner-content, .banner-img {
+        width: 100%;
+        padding: 10px 20px;
     }
 }
 /* responsive design ends here */
