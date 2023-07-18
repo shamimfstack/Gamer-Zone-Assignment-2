@@ -195,12 +195,75 @@ text-transform: uppercase;
 }
 /* banner styles ends here */
 
+/* gamer styles starts here */
+.gamer-section {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    padding: 50px 0;
+}
+.gamer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gamer-img {
+    width: 50%;
+}
+
+.gamer-content {
+    width: 50%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.gamer-title {
+    text-align: right;
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.gamer-desc {
+    color: #534C64;
+text-align: right;
+font-size: 1.2rem;
+font-weight: 400;
+line-height: 30px;
+margin-bottom: 10px;
+}
+.gamer-content button {
+    width: 200px;
+    margin-bottom: 24px;
+}
+
+.gamer-content .quote h3{
+    color: #534C64;
+font-size: 32px;
+font-weight: 700;
+line-height: 45px;
+}
+
+.gamer-content .quote .text1 {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: auto;
+}
+/* gamer styles ends here */
+
 /* main styles ends here */
 
 
 /* responsive design starts here */
 @media screen and (max-width: 576px) {
-    nav, .nav-menu {
+    nav, .nav-menu, .gamer {
         flex-direction: column;
     }
 
@@ -208,9 +271,23 @@ text-transform: uppercase;
         flex-direction: column-reverse;
     }
 
-    .banner-content, .banner-img {
+    .banner-content, .banner-img, .gamer-img, .gamer-content {
         width: 100%;
         padding: 10px 20px;
+    }
+
+    .gamer-section {
+        background: none;
+    }
+
+    .gamer-content {
+        margin-top: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gamer-content .gamer-desc {
+        text-align: center;
     }
 }
 /* responsive design ends here */
