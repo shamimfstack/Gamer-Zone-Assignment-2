@@ -401,13 +401,81 @@ line-height: 45px;
 }
 /* play games styles ends here */
 
+/* careers styles starts here */
+.career-section {
+    background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    margin: 200px 0;
+    padding: 100px 0;
+
+}
+
+.career-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.career-content {
+    width: 50%;
+}
+
+.career-title {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px; /* 125% */
+    margin-bottom: 20px;
+}
+
+.career-desc {
+    color: #FFF;
+    font-family: Work Sans;font-size: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px; /* 166.667% */
+    margin-bottom: 30px;
+}
+
+.designation-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.9rem;
+    margin-bottom: 25px;
+}
+
+.designation, .location {
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.location {
+    text-align: right;
+}
+
+.btn-career {
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #FF42A5;
+    border: none;
+    border-radius: 32px;
+}
+
+.career-img {
+    width: 50%;
+}
+/* careers styles ends here */
+
 /* main styles ends here */
 
 
 /* responsive design starts here */
 @media screen and (max-width: 576px) {
     nav, .nav-menu, .gamer, .videos-container,
-    .play-games1 {
+    .play-games1,
+    .career-container {
         flex-direction: column;
     }
 
@@ -420,8 +488,18 @@ line-height: 45px;
     }
     
 
-    .banner-content, .banner-img, .gamer-img, .gamer-content, .video,
-    .play-content1, .play-content2, .play-img-container1, .play-img-container2 {
+    .banner-content,
+    .banner-img, 
+    .gamer-img, 
+    .gamer-content, 
+    .video,
+    .play-content1, 
+    .play-content2,
+    .play-img-container1,
+    .play-img-container2,
+    .career-content,
+    .career-img
+     {
         width: 100%;
         padding: 10px 20px;
         margin: 0 auto;
