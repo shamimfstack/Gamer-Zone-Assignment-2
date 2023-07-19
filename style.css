@@ -25,6 +25,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 /* header styles starts here */
@@ -489,6 +490,11 @@ line-height: 45px;
     margin: 10px 5px;
     border-radius: 50px;
     background: #FFF;
+    outline: none;
+}
+
+.criteria:hover {
+    outline: 1px solid #FF42A5;
 }
 
 .criteria:hover .criteria-name{
@@ -507,6 +513,70 @@ font-weight: 600;
 /* games criteria styles ends here */
 
 /* main styles ends here */
+
+/* footer style starts here */
+footer {
+    background-color: #0B0223;
+    padding: 120px 0;
+}
+
+footer .nav-logo h3 span.amer {
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 55px 0;
+}
+
+.footer-menu a {
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+.media-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media-links a {
+    padding: 0 10px;
+    margin-bottom: 2rem;
+}
+
+.media-links a i {
+    font-size: 1.2rem;
+}
+
+.terms-condition {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.terms-condition a {
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+/* footer style ends here */
 
 
 /* responsive design starts here */
@@ -594,6 +664,22 @@ font-weight: 600;
     .criteria {
         width: 30%;
         padding: 10px 0;
+    }
+
+    .footer-content {
+        padding: 0 70px;
+    }
+
+    .footer-menu a, .media-links a {
+        width: 30%;
+    }
+
+    .terms-condition a {
+        width: 50%;
+    }
+
+    footer .copyright {
+        width: 240px;
     }
 }
 /* responsive design ends here */
