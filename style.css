@@ -25,12 +25,9 @@ ul {
 
 a {
     text-decoration: none;
-    color: #fff;
 }
 
 /* header styles starts here */
-/* header {} */
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -41,6 +38,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
 }
 
 .nav-logo img {
@@ -63,34 +61,27 @@ nav {
     align-items: center;
 }
 
-.nav-menu li {
-    margin: 25px 0;
-    
-}
-
-.nav-menu li:last-child {
-    display: flex;
-    align-items: center;
-}
-/* 
-.nav-menu li:last-child {
-    padding: 15px 0;
-} */
-.nav-menu > li .follow-us-link {
-    display: flex;
-    align-items: center;
-    /* align-content: center; */
-}
-
-.nav-menu > li .follow-us-link img {
-    margin-right: 10px;
-}
-
-.nav-menu > li > a {
-    padding: 0 20px;
+.nav-menu > a{
+    padding: 20px;
     color: #3C354F;
     text-align: center;
-    font-size: 1.12rem;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-menu .follow-us {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.10);
+    margin: 20px 0;
+}
+
+.nav-menu .follow-us a {
+    padding: 10px 8px;
+    color: #3C354F;
+    text-align: center;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -163,7 +154,6 @@ text-transform: lowercase;
 
 .banner-img {
     width: 50%;
-    /* padding: 0 20px; */
     margin-right: 50px;
 }
 
@@ -222,7 +212,7 @@ text-transform: uppercase;
 
 .gamer-title {
     text-align: right;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
@@ -246,9 +236,9 @@ margin-bottom: 10px;
 
 .gamer-content .quote h3{
     color: #534C64;
-font-size: 32px;
-font-weight: 700;
-line-height: 45px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 45px;
 }
 
 .gamer-content .quote .text1 {
@@ -261,18 +251,18 @@ line-height: 45px;
 
 /* videos styles starts here */
 .videos-section {
-    /* text-align: center; */
+    margin: 50px 0;
 }
 
-.section-title {
+.video-section-title {
     color: #0B0223;
     text-align: center;
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
-.section-title span {
-    font-size: 48px;
+.video-section-title span {
+    /* font-size: ; */
     font-weight: 700;
     background-color: #F948B2;
     background-clip: text;
@@ -280,10 +270,10 @@ line-height: 45px;
     -webkit-text-fill-color: transparent;
 }
 
-.section-desc {
+.video-section-desc {
     color: #534C64;
     text-align: center;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 40px;
 }
@@ -299,11 +289,44 @@ line-height: 45px;
     padding: 0 10px; 
 }
 
-.video img {
+.video .img-container {
+    position: relative;
     margin-bottom: 22px;
 }
 
+.video .img-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+
+
+.video .img-container .overlay i {
+    font-size: 50px;
+}
+
+.video .img-container:hover img {
+    outline: 3px solid #FF42A5;
+    border-radius: 16px;
+}
+
+.video .img-container:hover .overlay {
+    opacity: 1;
+}
+
 .videos .img-details {
+    /* margin-top: 22px; */
     color: #534C64;
     font-size: 1.25rem;
     font-weight: 500;
@@ -486,6 +509,7 @@ line-height: 45px;
     width: 200px;
     display: flex;
     align-items: center;
+    /* flex-basis: 200px; */
     padding: 6px;
     margin: 10px 5px;
     border-radius: 50px;
@@ -517,7 +541,7 @@ font-weight: 600;
 /* footer style starts here */
 footer {
     background-color: #0B0223;
-    padding: 120px 0;
+    padding: 100px 0;
 }
 
 footer .nav-logo h3 span.amer {
@@ -539,7 +563,10 @@ footer .nav-logo h3 span.amer {
 
 .footer-menu a {
     padding: 10px 15px;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    color: #FFF;
+    text-align: center;
+    font-weight: 500;
 }
 
 .media-links {
@@ -551,6 +578,7 @@ footer .nav-logo h3 span.amer {
 .media-links a {
     padding: 0 10px;
     margin-bottom: 2rem;
+    color: #fff;
 }
 
 .media-links a i {
@@ -581,20 +609,19 @@ footer p {
 
 /* responsive design starts here */
 @media screen and (max-width: 576px) {
-    nav, .nav-menu, .gamer, .videos-container,
+    nav, 
+    .nav-menu, 
+    .gamer, 
+    .videos-container,
     .play-games1,
     .career-container {
         flex-direction: column;
     }
 
-    .banner, .play-games2 {
+    .banner, 
+    .play-games2 {
         flex-direction: column-reverse;
     }
-
-    .play-content1, .play-content2 {
-        text-align: center;
-    }
-    
 
     .banner-content,
     .banner-img, 
@@ -613,7 +640,16 @@ footer p {
         margin: 0 auto;
     }
 
-    .play-title1, .play-title2, .play-desc1, .play-desc2 {
+    .play-title1, 
+    .play-title2, 
+    .play-desc1, 
+    .play-desc2, 
+    .gamer-content 
+    .gamer-desc,
+    .video,
+    .play-content1, 
+    .play-content2, 
+    .gamer-content .quote .text1 {
         text-align: center;
     }
     
@@ -624,7 +660,8 @@ footer p {
         position: relative;
     }
 
-    .play-img-container1 .overlay, .play-img-container2 .overlay {
+    .play-img-container1 .overlay, 
+    .play-img-container2 .overlay {
         width: 40%;
         position: absolute;
         top: 250px;
@@ -649,12 +686,120 @@ footer p {
         justify-content: center;
     }
 
-    .gamer-content .gamer-desc {
-        text-align: center;
-    }
-
+    /* .gamer-content .gamer-desc,
     .video {
         text-align: center;
+    } */
+
+    .games-criteria-section {
+        background: none;
+    }
+
+    .criteria {
+        width: 30%;
+        padding: 10px 0;
+    }
+
+    .footer-content {
+        /* padding: 0 30px; */
+    }
+
+    .footer-menu a, .media-links a {
+        width: 30%;
+    }
+
+    .terms-condition a {
+        width: 50%;
+    }
+
+    footer .copyright {
+        width: 240px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    nav, 
+    .nav-menu, 
+    .gamer,
+    .play-games1,
+    .career-container {
+        flex-direction: column;
+    }
+
+
+    .banner, 
+    .play-games2 {
+        flex-direction: column-reverse;
+    }
+
+    .banner-content,
+    .banner-img, 
+    .gamer-img, 
+    .gamer-content, 
+    .play-content1, 
+    .play-content2,
+    .play-img-container1,
+    .play-img-container2,
+    .career-content,
+    .career-img
+     {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 0 auto;
+    }
+
+    .videos-container {
+        flex-wrap: wrap;
+    }
+
+    .video{
+        width: 50%;
+    }
+
+    .play-title1, 
+    .play-title2, 
+    .play-desc1, 
+    .play-desc2, 
+    .gamer-content 
+    .gamer-desc,
+    .video,
+    .play-content1, 
+    .play-content2, 
+    .gamer-content .quote .text1 {
+        text-align: center;
+    }
+    
+    .play-img-container1 > img, .play-img-container2 > img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .play-img-container1 .overlay, 
+    .play-img-container2 .overlay {
+        width: 40%;
+        position: absolute;
+        top: 250px;
+        
+    }
+
+    .play-img-container1 .overlay {
+        left: 0px;
+    }
+
+    .play-img-container2 .overlay {
+        right: 0px;
+    }
+
+    .gamer-section {
+        background: none;
+    }
+
+    .gamer-content {
+        margin-top: 44px;
+        align-items: center;
+        justify-content: center;
     }
 
     .games-criteria-section {
@@ -667,7 +812,7 @@ footer p {
     }
 
     .footer-content {
-        padding: 0 70px;
+        /* padding: 0 30px; */
     }
 
     .footer-menu a, .media-links a {
