@@ -411,17 +411,19 @@ margin-bottom: 10px;
     position: relative;
 }
 
-.play-img-container1 .overlay, .play-img-container2 .overlay {
+.play-img-container1 .overlay > img, .play-img-container2 .overlay > img {
     position: absolute;
-    top: 350px;
+    width: 280px;
+    bottom: -120px;
+    
 }
 
-.play-img-container1 .overlay {
-    left: -140px;
+.play-img-container1 .overlay > img {
+    left: -60px;
 }
 
-.play-img-container2 .overlay {
-    right: -140px;
+.play-img-container2 .overlay > img {
+    right: -60px;
 }
 /* play games styles ends here */
 
@@ -465,13 +467,14 @@ margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1rem;
     margin-top: 1.9rem;
     margin-bottom: 25px;
 }
 
 .designation, .location {
     color: #FFF;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 600;
     line-height: 40px;
 }
@@ -481,7 +484,7 @@ margin-bottom: 10px;
 }
 
 .btn-career {
-    padding: 20px 40px;
+    padding: 0.8rem 1.25rem;
     background-color: #fff;
     color: #FF42A5;
     border: none;
@@ -630,8 +633,8 @@ footer p {
     .video,
     .play-content1, 
     .play-content2,
-    .play-img-container1,
-    .play-img-container2,
+    /* .play-img-container1,
+    .play-img-container2, */
     .career-content,
     .career-img
      {
@@ -652,28 +655,29 @@ footer p {
     .gamer-content .quote .text1 {
         text-align: center;
     }
+
+    .play-games2 {
+        margin-top: 200px;
+    }
+
+    .play-title1, .play-title2 {
+        font-size: 2rem;
+    }
+
+    .play-img-container1,
+    .play-img-container2 {
+        width: 70%;
+    }
     
-    .play-img-container1 > img, .play-img-container2 > img {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-        position: relative;
+    
+    .play-img-container1 .overlay > img, 
+    .play-img-container2 .overlay > img {
+        width: 70%;
     }
 
-    .play-img-container1 .overlay, 
-    .play-img-container2 .overlay {
-        width: 40%;
-        position: absolute;
-        top: 250px;
-        
-    }
-
-    .play-img-container1 .overlay {
-        left: 0px;
-    }
-
-    .play-img-container2 .overlay {
-        right: 0px;
+    
+    .designation-location {
+        font-size: 0.8rem;
     }
 
     .gamer-section {
@@ -695,6 +699,11 @@ footer p {
         background: none;
     }
 
+    .games-criteria-container {
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr); */
+    }
+
     .criteria {
         width: 30%;
         padding: 10px 0;
@@ -706,6 +715,10 @@ footer p {
 
     .footer-menu a, .media-links a {
         width: 30%;
+    }
+
+    .terms-condition {
+        text-align: center;
     }
 
     .terms-condition a {
@@ -756,6 +769,10 @@ footer p {
         width: 50%;
     }
 
+    .play-title1, .play-title2 {
+        font-size: 2rem;
+    }
+
     .play-title1, 
     .play-title2, 
     .play-desc1, 
@@ -769,27 +786,26 @@ footer p {
         text-align: center;
     }
     
-    .play-img-container1 > img, .play-img-container2 > img {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-        position: relative;
+
+    
+    .play-img-container1,
+    .play-img-container2 {
+        width: 60%;
+    }
+    
+    
+    .play-img-container1 .overlay > img, 
+    .play-img-container2 .overlay > img {
+        width: 60%;
     }
 
-    .play-img-container1 .overlay, 
-    .play-img-container2 .overlay {
-        width: 40%;
-        position: absolute;
-        top: 250px;
-        
-    }
 
     .play-img-container1 .overlay {
-        left: 0px;
+        left: 30px;
     }
 
     .play-img-container2 .overlay {
-        right: 0px;
+        right: 30px;
     }
 
     .gamer-section {
@@ -809,6 +825,10 @@ footer p {
     .criteria {
         width: 30%;
         padding: 10px 0;
+    }
+
+    .terms-condition {
+        text-align: center;
     }
 
     .footer-content {
